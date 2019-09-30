@@ -1,0 +1,82 @@
+{% extends "landing.html" %}
+{% load widget_tweaks %}
+
+{% block navbar %}
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="inner-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3 form-box wow fadeInUp">
+                    <div class="form-top">
+                        <div class="form-top-left">
+                            <h3>Comprar</h3>
+                            <p class="text-justify">
+                                Pago Online Seguro:
+                            </p>
+                            <img src="https://369969691f476073508a-60bf0867add971908d4f26a64519c2aa.ssl.cf5.rackcdn.com/logos/logo_epayco_200px.png" alt="">
+                        </div>
+                        <div class="form-top-right">
+                            <span aria-hidden="true" class="typcn typcn-credit-card"></span>
+                        </div>
+                    </div>
+                    <div class="form-bottom">
+                        {% if form.errors %}
+                            <p style="color: white">Algo ha salido mal, inténtalo nuevamente a contáctanos a: contacto@pronosticocambiario.com</p>
+                        {% endif %}
+
+                        <form role="form" method="post" action="{% url 'depayco:process_payment' %}">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label class="sr-only" for="form-name">{{ form.name.label_tag }}</label>
+                                {{ form.name|attr:"class:form-control"|attr:"placeholder:Nombre" }}
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-email">{{ form.email.label_tag }}</label>
+                                {{ form.email|attr:"class:form-control"|attr:"placeholder:Email" }}
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-credit-card-number">{{ form.credit_card_number.label_tag }}</label>
+                                {{ form.credit_card_number|attr:"class:form-control"|attr:"placeholder:Número de tarjeta de crédito" }}
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="">{{ form.cvc.label_tag }}</label>
+                                {{ form.cvc|attr:"class:form-control"|attr:"placeholder:Dígitos de seguridad" }}
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="">{{ form.credit_card_exp_month.label_tag }}</label>
+                                {{ form.credit_card_exp_month|attr:"class:form-control"|attr:"placeholder:Mes de expiración de la tarjeta, ejemplo: 09" }}
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="">{{ form.credit_card_exp_year.label_tag }}</label>
+                                {{ form.credit_card_exp_year|attr:"class:form-control"|attr:"placeholder:Año de expiración de la tarjeta, ejemplo: 2019" }}
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="">{{ form.phone.label_tag }}</label>
+                                {{ form.phone|attr:"class:form-control"|attr:"placeholder:Teléfono" }}
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="">{{ form.identification_type.label_tag }}</label>
+                                {{ form.identification_type|attr:"class:form-control"|attr:"placeholder:Tipo de identificación" }}
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="">{{ form.identification_number.label_tag }}</label>
+                                {{ form.identification_number|attr:"class:form-control"|attr:"placeholder:Número de identificación" }}
+                            </div>
+
+                            <input type="hidden" name="next" value="{% url 'home' %}" />
+
+                            <button type="submit" class="btn">Continuar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

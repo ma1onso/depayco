@@ -1,0 +1,29 @@
+{% extends "landing.html" %}
+{% load widget_tweaks %}
+
+{% block navbar %}
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="inner-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3 form-box wow fadeInUp">
+                    <p class="text-justify" style="color:white;">
+                      Hemos detectado que anteriormente adquiriste una membresía de pronosticocambiario.com
+                        Por tal motivo puedes volver a comprar la membresía presionando el siguiente botón.
+                    </p>
+                    <form action="{% url 'depayco:re_subscribe' %}" method="POST">
+                        {% csrf_token %}
+                        <button type="submit" class="btn">Comprar membresía</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
