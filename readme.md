@@ -1,4 +1,7 @@
-## CONFIGURATIONS
+## Introduction
+Django integration with epayco.co
+
+## CONFIGURATIONS (settings.py)
 
 **EPAYCO_PUBLIC_KEY**: String
 
@@ -31,3 +34,5 @@ PLANS = (
     }
 )
 ```
+TODOs:
+- [ ] Upload to pypi
