@@ -36,3 +36,4 @@ PLANS = (
 ```
 TODOs:
 - [ ] Upload to pypi
+- [ ] Support User model out the auth.models.User
