@@ -24,6 +24,10 @@ setuptools.setup(
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Operating System :: OS Independent',
+        'Development Status :: 5 - Production/Stable',
+        'Intended Audience :: Developers',
+        'Framework :: Django',
+        'Environment :: Web Environment',
     ],
     python_requires='>=3.6',
 )
