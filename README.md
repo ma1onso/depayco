@@ -1,7 +1,14 @@
 ## Introduction
 Django integration with epayco.co
 
-## CONFIGURATIONS (settings.py)
+## Installation
+- `pip install depayco`.
+
+- Set _depayco_ on INSTALLED_APPS.
+
+- Run `python manage.py migrate`.
+
+## Configurations (settings.py)
 
 **EPAYCO_PUBLIC_KEY**: String
 
@@ -34,6 +41,7 @@ PLANS = (
     }
 )
 ```
-TODOs:
-- [ ] Upload to pypi
-- [ ] Support User model out the auth.models.User
+
+## How to use
+
+`python manage.py sync_plans` to create plans on epayco.co
