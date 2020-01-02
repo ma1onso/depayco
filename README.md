@@ -1,5 +1,5 @@
 ## Introduction
-Django integration with epayco.co
+Django integration with ePayco ([epayco.co](https://www.epayco.co)), Colombian payment gateway.
 
 ## Installation
 - `pip install depayco`.
@@ -45,3 +45,7 @@ PLANS = (
 ## How to use
 
 `python manage.py sync_plans` to create plans on epayco.co
+
+## Buy me a coffee
+
+[![](https://cdn4.iconfinder.com/data/icons/simple-peyment-methods/512/paypal-64.png)](https://paypal.me/alonsoenrique)

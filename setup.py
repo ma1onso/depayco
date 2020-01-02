@@ -5,11 +5,11 @@ with open('README.md', 'r') as readme:
 
 setuptools.setup(
     name='depayco',
-    version='1.0.1',
+    version='1.0.2',
     license='GPL',
     author='Alonso',
     author_email='alons45@gmail.com',
-    description='Django integration with epayco.co',
+    description='Django integration with ePayco (epayco.co)',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/ma1onso/depayco',
