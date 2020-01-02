@@ -1,4 +1,3 @@
-## Introduction
 Django integration with ePayco ([epayco.co](https://www.epayco.co)), Colombian payment gateway.
 
 ## Installation
