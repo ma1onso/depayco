@@ -6,6 +6,7 @@ from depayco import epayco_client
 from depayco.models import Subscription
 
 
+# TODO: add output messages
 class Command(BaseCommand):
     def handle(self, *args, **options):
         active_subscriptions = Subscription.objects.filter(is_active=True)
