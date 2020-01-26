@@ -31,3 +31,6 @@ setuptools.setup(
     ],
     python_requires='>=3.6',
 )
+
+# TODO: templates files don't include in install with pip install depayco
+# TODO: pip install -U depayco does not work

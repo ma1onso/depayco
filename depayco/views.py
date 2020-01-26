@@ -10,6 +10,7 @@ from depayco.addons.decorators import already_subscribed
 from depayco.addons.forms import ChargeInformationForm
 
 
+# TODO: change login to can a newbie user test the application in first run
 @method_decorator(already_subscribed, name='dispatch')
 @method_decorator(login_required, name='dispatch')
 class EpaycoView(FormView):
