@@ -5,7 +5,7 @@ with open('README.md', 'r') as readme:
 
 setuptools.setup(
     name='depayco',
-    version='1.1.1',
+    version='1.1.2',
     license='GPL',
     author='Alonso',
     author_email='alons45@gmail.com',
