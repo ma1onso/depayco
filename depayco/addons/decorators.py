@@ -18,7 +18,7 @@ def subscription_required(function):
         elif request.user.is_authenticated:
             return redirect(reverse('depayco:epayco_form'))
         else:
-            return redirect('sign_up')
+            return redirect('login')
 
     return return_function
 
@@ -39,6 +39,6 @@ def already_subscribed(function):
         elif request.user.is_authenticated:
             return function(request, *args, **kwargs)
         else:
-            return redirect('sign_up')
+            return redirect('login')
 
     return return_function
