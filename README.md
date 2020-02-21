@@ -55,7 +55,7 @@ Django integration with ePayco ([epayco.co](https://www.epayco.co)), Colombian p
 
 **EPAYCO_SECRET_KEY**: String
 
-**PLANS**: Tuple
+**PLANS**: Tuple of dictionaries
 
 ## Buy me a coffee
 
